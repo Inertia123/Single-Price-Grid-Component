@@ -1,0 +1,122 @@
+$Cyan: hsl(179, 62%, 43%);
+$Bright-Yellow: hsl(71, 73%, 54%);
+$Light-Gray: hsl(205, 22%, 85%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Karla', sans-serif;
+    background: $Light-Gray;
+    padding: 4rem 1.5rem;
+    .container{
+        border-radius: 0.5rem;
+        overflow: hidden;
+        .first{
+            background: #fff;
+            padding: 2rem;
+            h1{
+                font-size: 1.5rem;
+                color: $Cyan;
+                margin-bottom: 1rem;
+                font-weight: 700;
+            }
+            h3{
+                font-size: 1.1rem;
+                color: $Bright-Yellow;
+                margin-bottom: 1.5rem;
+                font-weight: 700;
+                line-height: 1.5rem;
+            }
+            p{
+                color:$Grayish-Blue;
+                font-weight: 400;
+                line-height: 1.7rem;
+            }
+        }
+        .second{
+            background: $Cyan;
+            padding: 2rem;
+            color: #fff;
+            h1{
+                font-size: 1.1rem;
+                font-weight: 700;
+            }
+            .money{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 1.3rem;
+                margin-top: 1rem;
+                margin-bottom: 0.5rem;
+                h1{
+                    font-size: 2rem;
+                }
+                p{
+                    color: $Light-Gray;
+                    font-weight: 400;
+                }
+            }
+            p{    
+                font-weight:400;
+            }
+            button{
+                width: 100%;
+                border: none;
+                padding: 01rem;
+                font-family: 'Karla', sans-serif;
+                font-size: 1rem;
+                background: $Bright-Yellow;
+                color: white;
+                font-weight:700;
+                letter-spacing: 0.1rem;
+                margin-top: 2rem;
+                border-radius: 0.5rem;
+                &:hover{
+                    background: aqua;
+                }
+            }
+        }
+        .third{
+            background: #4abebd;
+            padding: 2rem;
+            h1{
+                color: white;
+                font-size: 1.3rem;
+                font-weight: 400;
+                margin-bottom: 1.5rem;
+            }
+            p{
+                color: $Light-Gray;
+                font-weight: 400;
+                line-height: 1.7rem;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 600px){
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        .container{
+            width: 45%;                        
+            display: grid;
+            
+            grid-template-columns:1fr 1fr;
+        .first{
+            grid-column: 1/3;
+        }
+        .third{
+            p{
+                line-height: 20px;
+            }
+        }
+        }
+    }
+}
